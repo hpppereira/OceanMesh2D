@@ -42,7 +42,7 @@ if $srtm; then
      echo "SRTM15+.nc global bathymetry file already exists"
   else
      # download SRTM15+ bathymetry
-     wget "https://topex.ucsd.edu/pub/srtm15_plus/SRTM15_V2.4.nc"" -O SRTM15+.nc
+     wget "https://topex.ucsd.edu/pub/srtm15_plus/SRTM15_V2.4.nc" -O SRTM15+.nc
   fi
 fi
 
