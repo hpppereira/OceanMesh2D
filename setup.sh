@@ -7,10 +7,10 @@
 ####################################################
 # Can toggle parameters if desired but the script
 # checks for their existance too
-m_map=true  # m_map mapping toolbox (reqd)
-gshhs=true  # global shoreline
-srtm=true   # SRTM15+V2.1 global bathymetry -> {user can select
-gebco=false # GEBCO_2020 global bathymetry  -> {desired source
+m_map=false  # m_map mapping toolbox (reqd)
+gshhs=false  # global shoreline
+srtm=false   # SRTM15+V2.1 global bathymetry -> {user can select
+gebco=true # GEBCO_2020 global bathymetry  -> {desired source
 
 if $m_map; then
   if [ -d "m_map" ]; then

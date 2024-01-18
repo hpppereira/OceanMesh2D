@@ -15,22 +15,25 @@ addpath(genpath('../m_map/'));
 bbox = [-46.13 -41.0 	% lon_min lon_max
         -24.78 -22.20]; 	% lat_min lat_max
 
-
 min_el    = 15.0;  		    % Minimum resolution in meters.
 max_el    = 1e3; 
 dt        = 2;              % Ensure mesh is stable at a 2 s timestep
 grade     = 0.15;           % Mesh grade in decimal percent.
 R         = 3;              % Number of elements to resolve feature width.
+
 %% STEP 2: specify geographical datasets and process the geographical data 
 %% to be used later with other OceanMesh classes...
-coastline = 'PostSandyNCEI'; 
-dem       = 'PostSandyNCEI.nc'; 
+
+coastline = 'GSHHS_f_L1';
+
+% coastline = 'PostSandyNCEI'; 
+% dem       = 'PostSandyNCEI.nc'; 
 
 gdat = geodata('shp',coastline,...
-               'dem',dem,...
                'bbox',bbox,...
                'h0',min_el);
-%% STEP 3: create an edge function class
+
+               %% STEP 3: create an edge function class
 fh = edgefx('geodata',gdat,...
             'fs',R,...
             'dt',dt,...

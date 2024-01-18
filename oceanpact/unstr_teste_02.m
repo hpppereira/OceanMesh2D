@@ -10,8 +10,8 @@ addpath(genpath('../m_map/'))
 % bbox = [166 176;		% lon_min lon_max
 %         -48 -40]; 		% lat_min lat_max
 
-bbox = [-51 -33
-        -31 -19];
+bbox = [-54 -30   % lon
+        -40 -10]; %lat
 
 min_el    = 1e3;  		% minimum resolution in meters.
 max_el    = 100e3; 		% maximum resolution in meters. 
